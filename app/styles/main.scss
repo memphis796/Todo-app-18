@@ -32,10 +32,17 @@
   margin: 0;
   padding: 0 1rem;
   // padding: 0 3em;
+  color: $brand-navbar-color;
   font-weight: lighter;
+  text-decoration: none;
 
   &:hover {
-    border-bottom: 3px solid $brand-item-border;
+    // border-bottom: 3px solid $brand-item-border;
     background-color: $brand-item-background;
+  }
+
+  .ember-view {
+    color: $brand-navbar-color;
+    text-decoration: none;
   }
 }
