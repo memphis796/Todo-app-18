@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="add-item">{{model.title}}</h2>
+
+  <form class="add-list__form" {{action saveReminder model newReminder on="submit"}}>
+    <ul class="todo-list__items">
+      {{#each model.reminders as |reminder|}}
+        <li class="todo-list">
+            <input type="checkbox" {{action checkDone reminder on="click" preventDefault=false}}>
+           {{#if reminder.done}}
+            <p class="list-items">{{reminder.name}}</p>
+           {{else}}
+             <p class="list-items">{{reminder.name}}</p>
+           {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{input class="input-area__todo" type="text" value=newReminder.name placeholder="What do you want do?"}}
+     <button class="delete-button__todo"{{action deleteList model on="click"}}>Delete</button>
+     <button class="accept-button__todo">ACCEPT</button>
+ </form>
+</div>
+
+{{oulet}}

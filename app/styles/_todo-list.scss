@@ -1,0 +1,53 @@
+.container {
+  max-width: 79%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.add-item {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.todo-list {
+  display: flex;
+}
+
+.list-items {
+  margin: 0;
+}
+
+.todo-list__items {
+  padding: 0;
+  list-style: none;
+}
+
+.add-list__form {
+  padding: 1em 1rem 0;
+  box-shadow: 0 9px 43px -5px;
+}
+
+// .form-button {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+.delete-button__todo {
+  font-size: 0.74rem;
+}
+
+.delete-button__todo,
+.accept-button__todo {
+  margin-bottom: 2rem;
+  border: 0;
+  background-color: $brand-navbar-color ;
+  color: $brand-form-accept;
+  font-size: 10px;
+}
+
+.input-area__todo {
+  width: 86%;
+  border: 0;
+  border-bottom: 0.5px solid $brand-form-border;
+  overflow: auto;
+}

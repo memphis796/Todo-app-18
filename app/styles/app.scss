@@ -1,4 +1,10 @@
-@import "yoga";
+@import 'yoga';
+@import 'base';
+@import 'main';
+@import 'variables';
+@import 'lists';
+@import 'new-list';
+@import 'todo-list';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype

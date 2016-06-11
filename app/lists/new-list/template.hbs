@@ -1,0 +1,12 @@
+<div class="container">
+  <h2 class="add-item">Add New List</h2>
+  <form class="add-list" {{action saveList model on="submit"}}>
+   {{input class="input-area" type="text" value=model.title placeholder="List Name"}}
+   <div class="form-button">
+     <button class="accept-button">ACCEPT</button>
+   </div>
+ </form>
+</div>
+
+
+{{outlet}}
