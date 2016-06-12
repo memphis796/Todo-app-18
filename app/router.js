@@ -9,7 +9,7 @@ Router.map(function () {
   this.route('lists', { path: '/' }, function () {
     this.route('new-list');
 
-    this.route('todo-list', { path: 'todo-list/:list_id' });
+    this.route('todo-list', { path: '/lists/:list_id' });
   });
 });
 

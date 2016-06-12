@@ -4,6 +4,6 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr(),
-  done: attr(),
-  list: belongsTo(`list`),
+  done: attr('boolean'),
+  list: belongsTo('list'),
 });

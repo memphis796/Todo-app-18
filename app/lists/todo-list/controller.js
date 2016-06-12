@@ -6,9 +6,9 @@ export default Ember.Controller.extend({
     done: false,
   },
 
-  saveReminder(item, attr) {
+  saveReminder(list, attr) {
     const reminder = this.store.createRecord(`reminder`, attr);
-    reminder.set(`list`, item);
+    reminder.set(`list`, list);
 
     reminder.save().then(() => {
       this.set(`newReminder`, {
@@ -18,13 +18,17 @@ export default Ember.Controller.extend({
     });
   },
 
-  checkDone(reminder) {
-    reminder.set(`done`);
+  checkDone(reminder, done) {
+    reminder.set(`done`, !done);
     reminder.save();
   },
 
-  deleteList(list) {
-    list.destroyRecord();
+  deleteList(reminder) {
+    reminder.destroyRecord();
     this.transitionToRoute(`lists`);
+  },
+
+  deleteModel(reminder) {
+    reminder.destroyRecord();
   },
 });
